@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &326580055
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5028955118357959131, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_Name
+      value: Cyborg_Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -37.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656979239760268129, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4d943623491ec144ae3620f42e4a162, type: 3}
 --- !u!1 &407256158
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +789,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2009795964031504185, guid: f89b3d7e841d74a40b289ae0340aa24b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b87df98d11a063b46bcef46a25b0f2ee, type: 2}
     - target: {fileID: 5066486633563492345, guid: f89b3d7e841d74a40b289ae0340aa24b, type: 3}
       propertyPath: m_Name
       value: Cyborg
