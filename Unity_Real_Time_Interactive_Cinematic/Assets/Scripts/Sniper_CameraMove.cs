@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Sniper_CameraMove : MonoBehaviour
 {
-    float speedH = 2f;
-    float speedV = 2f;
+    float speedH = 0.7f;
+    float speedV = 0.7f;
 
     float yaw = 0f;
     float pitch = 0f;
