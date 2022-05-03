@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TimelineController : MonoBehaviour
 {
-    //public Camera camera_1;
     public GameObject gameplay;
     public GameObject SniperModel;
     
