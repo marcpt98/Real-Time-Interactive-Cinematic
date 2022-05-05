@@ -6,11 +6,13 @@ public class TimelineController : MonoBehaviour
 {
     public GameObject gameplay;
     public GameObject SniperModel;
-    
+    public GameObject Bullet;
+
     // Start is called before the first frame update
     public void GameplayTransition()
     {
         gameplay.SetActive(true);
         SniperModel.SetActive(false);
+        Bullet.SetActive(false);
     }
 }
