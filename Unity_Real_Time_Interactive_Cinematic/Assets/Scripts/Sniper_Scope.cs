@@ -15,7 +15,7 @@ public class Sniper_Scope : MonoBehaviour
     float scopedFOV = 10f;
     float unScopedFOV;
 
-    public PlayableDirector parkourTimeline;
+    public PlayableDirector sniperTimeline;
     public GameObject gameplay;
     public GameObject SniperModel;
 
@@ -39,7 +39,7 @@ public class Sniper_Scope : MonoBehaviour
             OnUnScoped();
             gameplay.SetActive(false);
             SniperModel.SetActive(true);
-            parkourTimeline.Play();
+            sniperTimeline.Play();
         }
     }
 

@@ -9,7 +9,6 @@ public class QTE_PressButtonSimple : MonoBehaviour
     bool fail = false;
     Color sucessColor = new Color32(102, 255, 102, 255);
     GameObject gparent;
-    bool callfade = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,15 +25,8 @@ public class QTE_PressButtonSimple : MonoBehaviour
             {
                 GetComponent<Image>().color = sucessColor;
                 fillAmount = 1;
+                fail = true;
                 StartCoroutine(FadeOut());
-            }
-        }
-        else
-        {
-            if (!callfade)
-            {
-                StartCoroutine(FadeOut());
-                callfade = true;
             }
         }
 
