@@ -476,6 +476,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1050859069}
+          m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!320 &1050859067
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -492,6 +504,12 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 6347000728616200595, guid: b4c9708b55274e04ba3523028066f067, type: 2}
+    value: {fileID: 1971715882}
+  - key: {fileID: -5519266619128896794, guid: b4c9708b55274e04ba3523028066f067, type: 2}
+    value: {fileID: 1971715882}
+  - key: {fileID: -3045782750760009084, guid: b4c9708b55274e04ba3523028066f067, type: 2}
+    value: {fileID: 1971715882}
+  - key: {fileID: 8536310151904642472, guid: b4c9708b55274e04ba3523028066f067, type: 2}
     value: {fileID: 1971715882}
   m_ExposedReferences:
     m_References: []
