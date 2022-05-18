@@ -13,10 +13,12 @@ public class QTE_PressButton : MonoBehaviour
     Color failColor = new Color32(255, 102, 102, 255);
     GameObject gparent;
     bool callfade = false;
+    QTE_Manager Timeline;
 
     // Start is called before the first frame update
     void Start()
     {
+        Timeline = GameObject.Find("TimelineController").GetComponent<QTE_Manager>();
         gparent = transform.parent.gameObject;
         StartCoroutine(time());
         StartCoroutine(FillBar());
@@ -32,6 +34,7 @@ public class QTE_PressButton : MonoBehaviour
                 GetComponent<Image>().color = sucessColor;
                 fillAmount = 1;
                 StartCoroutine(FadeOut());
+                Timeline.Sucess();
             }
         }
         else
@@ -66,6 +69,7 @@ public class QTE_PressButton : MonoBehaviour
             fail = true;
             GetComponent<Image>().color = failColor;
             fillAmount = 1;
+            Timeline.Fail();
         }
     }
 

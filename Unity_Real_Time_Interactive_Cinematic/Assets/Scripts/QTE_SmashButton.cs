@@ -20,10 +20,12 @@ public class QTE_SmashButton : MonoBehaviour
     float BeatDelay = 0;
     bool firstframe = false;
     bool callfade = false;
+    QTE_Manager Timeline;
 
     // Start is called before the first frame update
     void Start()
     {
+        Timeline = GameObject.Find("TimelineController").GetComponent<QTE_Manager>();
         gparent = transform.parent.gameObject;
         StartCoroutine(time());
         StartCoroutine(Pulse());
@@ -62,6 +64,7 @@ public class QTE_SmashButton : MonoBehaviour
                     fillAmount = 1;
                     StartCoroutine(FadeOut());
                     callfade = true;
+                    Timeline.Sucess();
                 }
             }
         }
@@ -128,6 +131,7 @@ public class QTE_SmashButton : MonoBehaviour
             fail = true;
             GetComponent<Image>().color = failColor;
             fillAmount = 1;
+            Timeline.Fail();
         }
     }
 
