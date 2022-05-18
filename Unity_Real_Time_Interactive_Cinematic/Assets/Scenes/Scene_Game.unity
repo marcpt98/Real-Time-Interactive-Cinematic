@@ -892,8 +892,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718196878}
-  m_LocalRotation: {x: 0.2620726, y: 0.4488938, z: -0.13958395, w: 0.84281003}
-  m_LocalPosition: {x: -4.038, y: 10.483455, z: 0.264}
+  m_LocalRotation: {x: -0.15391234, y: 0.63876957, z: 0.13247891, w: 0.7421145}
+  m_LocalPosition: {x: -10.121147, y: 7.688834, z: -0.11854035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1106,7 +1106,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874577534}
-  m_LocalRotation: {x: 0.05356587, y: -0.44477844, z: 0.026660565, w: 0.89363986}
+  m_LocalRotation: {x: 0.053565875, y: -0.44477844, z: 0.026660563, w: 0.89363986}
   m_LocalPosition: {x: -20.12, y: 2.35, z: -1.3599997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1368,6 +1368,8 @@ PlayableDirector:
     value: {fileID: 1207267338}
   - key: {fileID: 1325296066709952228, guid: 90f188b9a1731554bbe77029f43ea039, type: 2}
     value: {fileID: 1207267337}
+  - key: {fileID: -2324673765042397258, guid: 90f188b9a1731554bbe77029f43ea039, type: 2}
+    value: {fileID: 6947142140642767446}
   m_ExposedReferences:
     m_References:
     - 04954a55dc1f06a4d9538b674357c766: {fileID: 1521435932}
@@ -1965,6 +1967,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2fde2191c4bf21d42a40dec18f0972e3, type: 3}
       propertyPath: m_Name
       value: Camera_Parkour_Raw_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2fde2191c4bf21d42a40dec18f0972e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fde2191c4bf21d42a40dec18f0972e3, type: 3}
@@ -2774,7 +2780,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521435930}
-  m_LocalRotation: {x: 0.2620726, y: 0.4488938, z: -0.13958395, w: 0.84281003}
+  m_LocalRotation: {x: 0.26207262, y: 0.44889376, z: -0.13958393, w: 0.84281003}
   m_LocalPosition: {x: -4.038, y: 10.483455, z: 0.264}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3944,7 +3950,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: -7, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 16, y: 54, z: 345}
 --- !u!95 &1886146872
 Animator:
   serializedVersion: 3
@@ -15862,6 +15868,7 @@ GameObject:
   - component: {fileID: 3041923002323372872}
   - component: {fileID: 6679411239901995778}
   - component: {fileID: 3515566802641552182}
+  - component: {fileID: 6947142140642767446}
   m_Layer: 0
   m_Name: Cube.063
   m_TagString: Untagged
@@ -15869,6 +15876,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &6947142140642767446
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6947142140642767445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &6965251064405636516
 MeshFilter:
   m_ObjectHideFlags: 0
