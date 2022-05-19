@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class QTE_Manager : MonoBehaviour
 {
+    public PlayableDirector director;
     public GameObject canvas;
     public GameObject qte_Smash;
     public GameObject qte_Simple;
@@ -33,11 +35,44 @@ public class QTE_Manager : MonoBehaviour
         Debug.Log(number);
     }
 
+    public void JumpTo(float seconds)
+    {
+        director.time = seconds;
+        Debug.Log("jumped to " + seconds);
+    }
+    public void JumpToFail()
+    {
+        switch (qte_number)
+        {
+            case 1:
+                director.time = 18.02;
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+            case 5:
+                
+                break;
+            default:
+                Debug.LogError("WRONG NUMBER");
+                break;
+        }
+
+        Debug.Log("jumped to " + director.time);
+    }
+
     public void Sucess()
     {
         switch (qte_number)
         {
             case 1:
+                JumpTo(12.68f);
                 Debug.Log("1 Sucess animation playing");
                 break;
             case 2:

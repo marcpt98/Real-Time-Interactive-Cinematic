@@ -460,8 +460,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: 708306d21d70cc9469ec1b0d8fd4451e, type: 2}
+    - {fileID: 11400000, guid: cc4390cca24952949a76aed135e5155b, type: 2}
+    - {fileID: 11400000, guid: 338c02e77be1663499ccb92a6ed52efa, type: 2}
     m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1050859069}
+          m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
+          m_MethodName: JumpToFail
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 18.02
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1050859069}
@@ -483,7 +498,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 5
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -505,11 +520,7 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 6347000728616200595, guid: b4c9708b55274e04ba3523028066f067, type: 2}
     value: {fileID: 1971715882}
-  - key: {fileID: -5519266619128896794, guid: b4c9708b55274e04ba3523028066f067, type: 2}
-    value: {fileID: 1971715882}
-  - key: {fileID: -3045782750760009084, guid: b4c9708b55274e04ba3523028066f067, type: 2}
-    value: {fileID: 1971715882}
-  - key: {fileID: 8536310151904642472, guid: b4c9708b55274e04ba3523028066f067, type: 2}
+  - key: {fileID: 1119213950357806566, guid: b4c9708b55274e04ba3523028066f067, type: 2}
     value: {fileID: 1971715882}
   m_ExposedReferences:
     m_References: []
@@ -539,6 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32876348c5ec6804cb242dd74f5e12e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  director: {fileID: 1050859067}
   canvas: {fileID: 8395167248223550133, guid: 0338e08caa72c01499b91b37f4ef2ca0, type: 3}
   qte_Smash: {fileID: 9218587086945379599, guid: c0414e7b3304ae94c9527c6885c5a061, type: 3}
   qte_Simple: {fileID: 9218587086945379599, guid: efc54ceaa0b6ca640b0424ca9ea8cb5e, type: 3}
