@@ -3,7 +3,62 @@ guid: 380cc26869043084f8f564ab24b9095b
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_shinobiEyes
+    second: {fileID: 2100000, guid: 62a4c6f3a6317e94cb14ef7a78ac667d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_eyeOcclusion
+    second: {fileID: 2100000, guid: 5134fdd60cbc65c42af085bcba6690ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_eyeTear
+    second: {fileID: 2100000, guid: 57f2d62212682d543ae2d8ca3f908b3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_shinobi
+    second: {fileID: 2100000, guid: a38cbd37d72379044a6e5cb513ba27d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_shinobiEyeGloss
+    second: {fileID: 2100000, guid: 0a206153adb5faf4bab701fbcb2733b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_shinobiFur1
+    second: {fileID: 2100000, guid: ce94b87ccff2f404e90b3e80d855db92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_shinobiFur2
+    second: {fileID: 2100000, guid: 6418c094459d228458a123dc2c1c7b2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_shinobiFur3
+    second: {fileID: 2100000, guid: c262bff94ad45bc4bbb9ea22030e4f8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_shinobiHair
+    second: {fileID: 2100000, guid: ce1b50f2b55168d479c06be693c27c41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_shinobiHair1
+    second: {fileID: 2100000, guid: 96103489082d3644e8f3d5420db3b03a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_teeth
+    second: {fileID: 2100000, guid: e8c0f97a3d883a143bf6aa284efd8632, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
