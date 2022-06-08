@@ -35,11 +35,18 @@ public class Sniper_Scope : MonoBehaviour
 
         if (isScoped && Input.GetButtonDown("Fire1")) 
         {
-            animator.SetBool("Scoped", isScoped = false);
-            OnUnScoped();
-            gameplay.SetActive(false);
-            SniperModel.SetActive(true);
-            sniperTimeline.Play();
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                animator.SetBool("Scoped", isScoped = false);
+                OnUnScoped();
+                gameplay.SetActive(false);
+                SniperModel.SetActive(true);
+                sniperTimeline.Play();
+                Debug.Log(hit.transform.gameObject.name);
+            }
         }
     }
 
