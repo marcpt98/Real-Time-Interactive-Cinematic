@@ -12,6 +12,9 @@ public class QTE_Manager : MonoBehaviour
     GameObject current_qte;
     int qte_number = 0;
     bool qte_1 = false;
+    bool qte_2 = false;
+    bool qte_3 = false;
+    bool qte_4 = false;
 
     public void CreateSmashQTE()
     {
@@ -53,9 +56,10 @@ public class QTE_Manager : MonoBehaviour
             case 2:
                 if (!qte_1)
                 {
-                    director.time = 11.683f;
+                    director.time = 11.70f;
                     Debug.Log("2 From Fail to Main Timeline");
                 }
+                qte_1 = false;
                 break;
             case 3:
                 Debug.Log("3 From Fail to Main Timeline");
@@ -84,14 +88,18 @@ public class QTE_Manager : MonoBehaviour
                 Debug.Log("1 Sucess animation playing");
                 break;
             case 2:
+                qte_2 = true;
                 JumpTo(9.6f);
                 Debug.Log("2 Sucess animation playing");
                 break;
             case 3:
+                qte_3 = true;
                 JumpTo(17.45f);
                 Debug.Log("3 Sucess animation playing");
                 break;
             case 4:
+                qte_4 = true;
+                JumpTo(23.25f);
                 Debug.Log("4 Sucess animation playing");
                 break;
             case 5:
@@ -126,5 +134,24 @@ public class QTE_Manager : MonoBehaviour
                 Debug.LogError("WRONG NUMBER");
                 break;
         }
+    }
+
+    public void ResetParkour()
+    {
+        if (!qte_1 && !qte_2 && !qte_3 && !qte_4)
+        {
+            director.Stop();
+            director.time = 0;
+            director.Evaluate();
+            director.Play();
+            qte_1 = false;
+            qte_2 = false;
+            qte_3 = false;
+            qte_4 = false;
+            Debug.Log("Reset Parkour");
+        }
+        qte_2 = false;
+        qte_3 = false;
+        qte_4 = false;
     }
 }
