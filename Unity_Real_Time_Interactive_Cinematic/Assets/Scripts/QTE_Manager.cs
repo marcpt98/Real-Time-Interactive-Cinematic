@@ -11,9 +11,11 @@ public class QTE_Manager : MonoBehaviour
     public GameObject qte_Simple;
     GameObject current_qte;
     int qte_number = 0;
+    bool qte_1 = false;
 
     public void CreateSmashQTE()
     {
+        if(!qte_1)
         CreateQTE(qte_Smash);
     }
 
@@ -40,24 +42,29 @@ public class QTE_Manager : MonoBehaviour
         director.time = seconds;
         Debug.Log("jumped to " + seconds);
     }
-    public void JumpToFail()
+    public void JumpFromFailToMain()
     {
         switch (qte_number)
         {
             case 1:
-                director.time = 18.02;
+                //director.time = 11.28f;
+                Debug.Log("1 From Fail to Main Timeline");
                 break;
             case 2:
-                
+                if (!qte_1)
+                {
+                    director.time = 11.683f;
+                    Debug.Log("2 From Fail to Main Timeline");
+                }
                 break;
             case 3:
-                
+                Debug.Log("3 From Fail to Main Timeline");
                 break;
             case 4:
-                
+                Debug.Log("4 From Fail to Main Timeline");
                 break;
             case 5:
-                
+                Debug.Log("5 From Fail to Main Timeline");
                 break;
             default:
                 Debug.LogError("WRONG NUMBER");
@@ -72,13 +79,16 @@ public class QTE_Manager : MonoBehaviour
         switch (qte_number)
         {
             case 1:
-                JumpTo(12.68f);
+                qte_1 = true;
+                JumpTo(10.75f);
                 Debug.Log("1 Sucess animation playing");
                 break;
             case 2:
+                JumpTo(9.6f);
                 Debug.Log("2 Sucess animation playing");
                 break;
             case 3:
+                JumpTo(17.45f);
                 Debug.Log("3 Sucess animation playing");
                 break;
             case 4:

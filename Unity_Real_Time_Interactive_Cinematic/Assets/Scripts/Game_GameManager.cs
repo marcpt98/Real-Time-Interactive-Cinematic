@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Game_GameManager : MonoBehaviour
 {
     bool visible = false;
+    public PlayableDirector parkourTimeline;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,8 +16,11 @@ public class Game_GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-
-    }*/
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            parkourTimeline.Play();
+        }
+    }
 }

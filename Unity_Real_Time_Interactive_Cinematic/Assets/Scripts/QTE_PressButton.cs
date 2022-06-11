@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class QTE_PressButton : MonoBehaviour
 {
     public float fillAmount = 0;
-    float currentTime = 2f;
-    float maxTime = 2f;
+    float currentTime = 1.76f;
+    float maxTime = 1.76f;
     bool fail = false;
     Color sucessColor = new Color32(102, 255, 102, 255);
     Color failColor = new Color32(255, 102, 102, 255);
@@ -18,7 +18,7 @@ public class QTE_PressButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Timeline = GameObject.Find("TimelineController").GetComponent<QTE_Manager>();
+        Timeline = GameObject.Find("Parkour_TimelineManager").GetComponent<QTE_Manager>();
         gparent = transform.parent.gameObject;
         StartCoroutine(time());
         StartCoroutine(FillBar());

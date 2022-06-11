@@ -467,7 +467,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1050859069}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: JumpToFail
+          m_MethodName: JumpFromFailToMain
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

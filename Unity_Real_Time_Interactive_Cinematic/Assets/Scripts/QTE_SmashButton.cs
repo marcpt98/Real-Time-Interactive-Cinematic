@@ -25,7 +25,7 @@ public class QTE_SmashButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Timeline = GameObject.Find("TimelineController").GetComponent<QTE_Manager>();
+        Timeline = GameObject.Find("Parkour_TimelineManager").GetComponent<QTE_Manager>();
         gparent = transform.parent.gameObject;
         StartCoroutine(time());
         StartCoroutine(Pulse());
@@ -124,7 +124,7 @@ public class QTE_SmashButton : MonoBehaviour
 
     IEnumerator time()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2.75f);
         
         if (fillAmount != 1) 
         {
