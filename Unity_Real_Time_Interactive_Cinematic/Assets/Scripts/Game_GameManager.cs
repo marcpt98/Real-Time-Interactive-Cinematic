@@ -7,6 +7,7 @@ public class Game_GameManager : MonoBehaviour
 {
     bool visible = false;
     public PlayableDirector parkourTimeline;
+    public PlayableDirector introTimeline;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class Game_GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
+            introTimeline.Stop();
             parkourTimeline.Play();
         }
     }

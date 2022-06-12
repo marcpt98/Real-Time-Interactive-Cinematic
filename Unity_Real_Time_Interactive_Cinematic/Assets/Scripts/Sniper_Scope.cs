@@ -13,7 +13,7 @@ public class Sniper_Scope : MonoBehaviour
     public Camera mainCamera;
 
     float scopedFOV = 10f;
-    float unScopedFOV;
+    float unScopedFOV = 60f;
 
     public PlayableDirector sniperTimeline;
     public GameObject gameplay;
@@ -27,7 +27,12 @@ public class Sniper_Scope : MonoBehaviour
             animator.SetBool("Scoped", isScoped = true);
             StartCoroutine(OnScoped());
         }
-        if (Input.GetButtonUp("Fire2"))
+        /*if (Input.GetButtonUp("Fire2"))
+        {
+            animator.SetBool("Scoped", isScoped = false);
+            OnUnScoped();
+        }*/
+        if (Input.GetKey(KeyCode.Mouse1) == false)
         {
             animator.SetBool("Scoped", isScoped = false);
             OnUnScoped();

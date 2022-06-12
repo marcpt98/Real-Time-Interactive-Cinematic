@@ -123,6 +123,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26944718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26944719}
+  - component: {fileID: 26944720}
+  m_Layer: 0
+  m_Name: Fight_TimelineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26944719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26944718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.42, y: 13.78, z: -16.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1580530761}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &26944720
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26944718}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: bed03b9c85d41da489906ff117463886, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &92642099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cdad5e52b27138747a2127e2928b683f, type: 3}
@@ -1322,7 +1370,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874577534}
-  m_LocalRotation: {x: 0.015014582, y: 0.6825829, z: -0.014029331, w: 0.73051924}
+  m_LocalRotation: {x: 0.015014582, y: 0.6825829, z: -0.014029332, w: 0.73051924}
   m_LocalPosition: {x: -20.12, y: 2.35, z: -1.3599997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1534,6 +1582,7 @@ GameObject:
   - component: {fileID: 996131011}
   - component: {fileID: 996131013}
   - component: {fileID: 996131014}
+  - component: {fileID: 996131015}
   m_Layer: 0
   m_Name: Parkour_TimelineManager
   m_TagString: Untagged
@@ -1647,6 +1696,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 77280c6bcea18e6489af9b483445ac0b, type: 2}
     - {fileID: 11400000, guid: b907c42f7f11e0d4b882f06e929e3231, type: 2}
     - {fileID: 11400000, guid: 7a45195d25381e4488636ff5f2663fee, type: 2}
+    - {fileID: 11400000, guid: 905f218ecff8e7b4cb1349a61c244efa, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1780,6 +1830,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 996131015}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FightTransition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &996131014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,6 +1860,22 @@ MonoBehaviour:
   canvas: {fileID: 8395167248223550133, guid: 0338e08caa72c01499b91b37f4ef2ca0, type: 3}
   qte_Smash: {fileID: 9218587086945379599, guid: c0414e7b3304ae94c9527c6885c5a061, type: 3}
   qte_Simple: {fileID: 9218587086945379599, guid: efc54ceaa0b6ca640b0424ca9ea8cb5e, type: 3}
+--- !u!114 &996131015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996131010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa26be17cf147c546a6e1448d363cebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introTimeline: {fileID: 1150534168}
+  parkourTimeline: {fileID: 996131011}
+  sniperwaitTimeline: {fileID: 356809619}
+  fightTimeline: {fileID: 26944720}
 --- !u!1 &1054248155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +1906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parkourTimeline: {fileID: 996131011}
+  introTimeline: {fileID: 1150534168}
 --- !u!4 &1054248157
 Transform:
   m_ObjectHideFlags: 0
@@ -2141,11 +2222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa26be17cf147c546a6e1448d363cebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SniperCamera: {fileID: 1946154940}
-  SniperModel: {fileID: 1799749656}
-  Bullet: {fileID: 381489431}
+  introTimeline: {fileID: 1150534168}
   parkourTimeline: {fileID: 996131011}
   sniperwaitTimeline: {fileID: 356809619}
+  fightTimeline: {fileID: 26944720}
 --- !u!114 &1150534171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3505,7 +3585,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521435930}
-  m_LocalRotation: {x: 0.2620726, y: 0.44889373, z: -0.13958393, w: 0.84281003}
+  m_LocalRotation: {x: 0.26207262, y: 0.44889376, z: -0.13958393, w: 0.84281003}
   m_LocalPosition: {x: -4.038, y: 10.483455, z: 0.264}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3640,6 +3720,7 @@ Transform:
   - {fileID: 356809618}
   - {fileID: 1872822074}
   - {fileID: 996131012}
+  - {fileID: 26944719}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4739,11 +4820,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa26be17cf147c546a6e1448d363cebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SniperCamera: {fileID: 0}
-  SniperModel: {fileID: 1799749656}
-  Bullet: {fileID: 381489431}
+  introTimeline: {fileID: 1150534168}
   parkourTimeline: {fileID: 996131011}
-  sniperwaitTimeline: {fileID: 0}
+  sniperwaitTimeline: {fileID: 356809619}
+  fightTimeline: {fileID: 26944720}
 --- !u!1 &1886146870
 GameObject:
   m_ObjectHideFlags: 0

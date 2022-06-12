@@ -150,7 +150,6 @@ public class QTE_Manager : MonoBehaviour
             qte_4 = false;
             Debug.Log("Reset Parkour");
         }
-        qte_1 = false;
         qte_2 = false;
         qte_3 = false;
         qte_4 = false;

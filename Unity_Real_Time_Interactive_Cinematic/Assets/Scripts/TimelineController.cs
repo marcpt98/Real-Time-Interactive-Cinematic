@@ -5,15 +5,15 @@ using UnityEngine.Playables;
 
 public class TimelineController : MonoBehaviour
 {
-    public GameObject SniperCamera;
-    public GameObject SniperModel;
-    public GameObject Bullet;
+    public PlayableDirector introTimeline;
     public PlayableDirector parkourTimeline;
     public PlayableDirector sniperwaitTimeline;
+    public PlayableDirector fightTimeline;
 
     // From Intro to Sniper
     public void GameplayTransition()
     {
+        introTimeline.Stop();
         sniperwaitTimeline.Play();
     }
 
@@ -22,5 +22,12 @@ public class TimelineController : MonoBehaviour
     {
         sniperwaitTimeline.Stop();
         parkourTimeline.Play();
+    }
+
+    // From Parkour to Fight
+    public void FightTransition()
+    {
+        parkourTimeline.Stop();
+        fightTimeline.Play();
     }
 }
