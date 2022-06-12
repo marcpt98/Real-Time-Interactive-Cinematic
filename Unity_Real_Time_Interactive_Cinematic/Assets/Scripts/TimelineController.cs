@@ -8,6 +8,7 @@ public class TimelineController : MonoBehaviour
     public PlayableDirector introTimeline;
     public PlayableDirector parkourTimeline;
     public PlayableDirector sniperwaitTimeline;
+    public PlayableDirector prefightTimeline;
     public PlayableDirector fightTimeline;
 
     // From Intro to Sniper
@@ -24,10 +25,17 @@ public class TimelineController : MonoBehaviour
         parkourTimeline.Play();
     }
 
-    // From Parkour to Fight
-    public void FightTransition()
+    // From Parkour to prefight
+    public void PrefightTransition()
     {
         parkourTimeline.Stop();
+        prefightTimeline.Play();
+    }
+
+    // From Prefight to Fight
+    public void FightTransition()
+    {
+        prefightTimeline.Stop();
         fightTimeline.Play();
     }
 }
