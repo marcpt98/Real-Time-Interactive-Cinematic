@@ -8,6 +8,7 @@ public class Game_GameManager : MonoBehaviour
     bool visible = false;
     public PlayableDirector parkourTimeline;
     public PlayableDirector introTimeline;
+    public GameObject deadMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +25,10 @@ public class Game_GameManager : MonoBehaviour
             introTimeline.Stop();
             parkourTimeline.Play();
         }
+    }
+
+    void ShowDeadMenu()
+    {
+        deadMenu.SetActive(true);
     }
 }
