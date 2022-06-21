@@ -10,6 +10,9 @@ public class TimelineController : MonoBehaviour
     public PlayableDirector sniperwaitTimeline;
     public PlayableDirector prefightTimeline;
     public PlayableDirector fightTimeline;
+    public PlayableDirector deadTimeline;
+    public GameObject deadMenu;
+    QTE_Manager Timeline;
 
     // From Intro to Sniper
     public void GameplayTransition()
@@ -37,5 +40,42 @@ public class TimelineController : MonoBehaviour
     {
         prefightTimeline.Stop();
         fightTimeline.Play();
+    }
+
+    // From game to Dead screen
+    public void DeadParkourMenuTransition()
+    {
+        if (!GameObject.Find("Parkour_TimelineManager").GetComponent<QTE_Manager>().qte_1)
+        {
+            parkourTimeline.Stop();
+            deadTimeline.Play();
+        }
+    }
+
+    public void SetActiveMenuDead()
+    {
+        deadMenu.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void TryAgain(int checkpoint)
+    {
+        if (checkpoint == 1)
+        {
+            deadTimeline.Stop();
+            deadMenu.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            parkourTimeline.Play();
+        }
+        else if (checkpoint == 2)
+        {
+
+        }
+        else
+        {
+            Debug.LogError("Try again wrong number");
+        }
     }
 }

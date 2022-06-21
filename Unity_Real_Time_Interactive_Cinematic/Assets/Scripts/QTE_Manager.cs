@@ -11,10 +11,10 @@ public class QTE_Manager : MonoBehaviour
     public GameObject qte_Simple;
     GameObject current_qte;
     int qte_number = 0;
-    bool qte_1 = false;
+    public bool qte_1 = false;
     bool qte_2 = false;
-    bool qte_3 = false;
-    bool qte_4 = false;
+    /*bool qte_3 = false;
+    bool qte_4 = false;*/
 
     public void CreateSmashQTE()
     {
@@ -54,10 +54,11 @@ public class QTE_Manager : MonoBehaviour
                 Debug.Log("1 From Fail to Main Timeline");
                 break;
             case 2:
-                if (!qte_1)
+                if (!qte_1 || qte_2)
                 {
                     director.time = 11.70f;
                     Debug.Log("2 From Fail to Main Timeline");
+                    qte_2 = false;
                 }
                 qte_1 = false;
                 break;
@@ -88,17 +89,18 @@ public class QTE_Manager : MonoBehaviour
                 Debug.Log("1 Sucess animation playing");
                 break;
             case 2:
+                qte_1 = true;
                 qte_2 = true;
                 JumpTo(9.6f);
                 Debug.Log("2 Sucess animation playing");
                 break;
             case 3:
-                qte_3 = true;
+                qte_1 = true;
                 JumpTo(17.45f);
                 Debug.Log("3 Sucess animation playing");
                 break;
             case 4:
-                qte_4 = true;
+                qte_1 = true;
                 JumpTo(23.25f);
                 Debug.Log("4 Sucess animation playing");
                 break;
@@ -125,6 +127,7 @@ public class QTE_Manager : MonoBehaviour
                 Debug.Log("3 Fail animation playing");
                 break;
             case 4:
+                qte_1 = false;
                 Debug.Log("4 Fail animation playing");
                 break;
             case 5:
@@ -136,7 +139,7 @@ public class QTE_Manager : MonoBehaviour
         }
     }
 
-    public void ResetParkour()
+    /*public void ResetParkour()
     {
         if (!qte_1 && !qte_2 && !qte_3 && !qte_4)
         {
@@ -153,5 +156,5 @@ public class QTE_Manager : MonoBehaviour
         qte_2 = false;
         qte_3 = false;
         qte_4 = false;
-    }
+    }*/
 }

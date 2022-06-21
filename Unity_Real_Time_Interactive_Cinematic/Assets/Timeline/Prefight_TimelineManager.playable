@@ -3297,10 +3297,11 @@ MonoBehaviour:
   m_Version: 0
   m_Tracks:
   - {fileID: -6001790760089375151}
-  - {fileID: 9004940140583000277}
+  - {fileID: 1096229915595499951}
   - {fileID: 5632652402954467260}
   - {fileID: -8193771184656707334}
   - {fileID: -2339465935683271172}
+  - {fileID: 9004940140583000277}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -3799,6 +3800,31 @@ MonoBehaviour:
   m_Markers:
     m_Objects: []
   m_PostPlaybackState: 3
+--- !u!114 &1096229915595499951
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
+  m_Name: CM_Cameras
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children:
+  - {fileID: 5270800245062021900}
+  - {fileID: 5495276317413658843}
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
 --- !u!114 &1162858133166827885
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5251,7 +5277,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 9004940140583000277}
+  m_Parent: {fileID: 1096229915595499951}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -5437,7 +5463,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 9004940140583000277}
+  m_Parent: {fileID: 1096229915595499951}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -7406,7 +7432,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
-  m_Name: CM_Cameras
+  m_Name: Cameras Turnoff
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -7416,8 +7442,6 @@ MonoBehaviour:
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
   m_Children:
-  - {fileID: 5270800245062021900}
-  - {fileID: 5495276317413658843}
   - {fileID: -7637865032654779539}
   - {fileID: -1935059930931009261}
   - {fileID: -3610044678157952668}
