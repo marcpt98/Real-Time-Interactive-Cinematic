@@ -10,10 +10,11 @@ public class TimelineController : MonoBehaviour
     public PlayableDirector sniperwaitTimeline;
     public PlayableDirector prefightTimeline;
     public PlayableDirector fightTimeline;
-    public PlayableDirector deadTimeline;
-    public GameObject deadMenu;
+    public PlayableDirector deadParkourTimeline;
+    public PlayableDirector deadFightTimeline;
+    public GameObject deadMenuParkour;
+    public GameObject deadMenuFight;
     QTE_Manager Timeline;
-    int checkpoint = 0;
 
     // From Intro to Sniper
     public void GameplayTransition()
@@ -48,9 +49,8 @@ public class TimelineController : MonoBehaviour
     {
         if (!GameObject.Find("Parkour_TimelineManager").GetComponent<QTE_Manager>().qte_1)
         {
-            checkpoint = 1;
             parkourTimeline.Stop();
-            deadTimeline.Play();
+            deadParkourTimeline.Play();
         }
     }
 
@@ -59,41 +59,46 @@ public class TimelineController : MonoBehaviour
     {
         if (!GameObject.Find("Fight_TimelineManager").GetComponent<QTE_Manager>().qte_3)
         {
-            checkpoint = 2;
             fightTimeline.Stop();
-            deadTimeline.Play();
+            deadFightTimeline.Play();
         }
         GameObject.Find("Fight_TimelineManager").GetComponent<QTE_Manager>().qte_3 = false;
     }
 
-    public void SetActiveMenuDead()
+    public void SetActiveMenuDead(int timelinenum)
     {
-        deadMenu.SetActive(true);
+        switch (timelinenum)
+        {
+            case 1:
+                deadMenuParkour.SetActive(true);
+                break;
+            case 2:
+                deadMenuFight.SetActive(true);
+                break;
+            default:
+                Debug.LogError("WRONG NUMBER");
+                break;
+        }
+        
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void TryAgain()
+    public void TryAgainParkour()
     {
-        if (checkpoint == 1)
-        {
-            deadTimeline.Stop();
-            deadMenu.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            parkourTimeline.Play();
-        }
-        else if (checkpoint == 2)
-        {
-            deadTimeline.Stop();
-            deadMenu.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            fightTimeline.Play();
-        }
-        else
-        {
-            Debug.LogError("Try again wrong number");
-        }
+        deadParkourTimeline.Stop();
+        deadMenuParkour.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        parkourTimeline.Play();
+    }
+
+    public void TryAgainFight()
+    {
+        deadFightTimeline.Stop();
+        deadMenuFight.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        fightTimeline.Play(); 
     }
 }
