@@ -13,8 +13,8 @@ public class QTE_Manager : MonoBehaviour
     int qte_number = 0;
     public bool qte_1 = false;
     bool qte_2 = false;
-    /*bool qte_3 = false;
-    bool qte_4 = false;*/
+    public bool qte_3 = false;
+    /*bool qte_4 = false;*/
 
     public void CreateSmashQTE()
     {
@@ -37,7 +37,7 @@ public class QTE_Manager : MonoBehaviour
     public void GetNumberQTE(int number)
     {
         qte_number = number;
-        Debug.Log(number);
+        Debug.Log(qte_number);
     }
 
     public void JumpTo(float seconds)
@@ -81,6 +81,7 @@ public class QTE_Manager : MonoBehaviour
 
     public void Sucess()
     {
+        Debug.Log(qte_number);
         switch (qte_number)
         {
             case 1:
@@ -105,7 +106,29 @@ public class QTE_Manager : MonoBehaviour
                 Debug.Log("4 Sucess animation playing");
                 break;
             case 5:
+                qte_3 = true;
+                JumpTo(11.45f);
                 Debug.Log("5 Sucess animation playing");
+                break;
+            case 6:
+                qte_3 = true;
+                JumpTo(16.75f);
+                Debug.Log("6 Sucess animation playing");
+                break;
+            case 7:
+                qte_3 = true;
+                JumpTo(21.70f);
+                Debug.Log("7 Sucess animation playing");
+                break;
+            case 8:
+                qte_3 = true;
+                JumpTo(25.45f);
+                Debug.Log("8 Sucess animation playing");
+                break;
+            case 9:
+                qte_3 = true;
+                JumpTo(29.75f);
+                Debug.Log("9 Sucess animation playing");
                 break;
             default:
                 Debug.LogError("WRONG NUMBER");
@@ -132,6 +155,18 @@ public class QTE_Manager : MonoBehaviour
                 break;
             case 5:
                 Debug.Log("5 Fail animation playing");
+                break;
+            case 6:
+                Debug.Log("6 Fail animation playing");
+                break;
+            case 7:
+                Debug.Log("7 Fail animation playing");
+                break;
+            case 8:
+                Debug.Log("8 Fail animation playing");
+                break;
+            case 9:
+                Debug.Log("9 Fail animation playing");
                 break;
             default:
                 Debug.LogError("WRONG NUMBER");

@@ -13,6 +13,7 @@ public class TimelineController : MonoBehaviour
     public PlayableDirector deadTimeline;
     public GameObject deadMenu;
     QTE_Manager Timeline;
+    int checkpoint = 0;
 
     // From Intro to Sniper
     public void GameplayTransition()
@@ -47,9 +48,22 @@ public class TimelineController : MonoBehaviour
     {
         if (!GameObject.Find("Parkour_TimelineManager").GetComponent<QTE_Manager>().qte_1)
         {
+            checkpoint = 1;
             parkourTimeline.Stop();
             deadTimeline.Play();
         }
+    }
+
+    // From game to Dead screen
+    public void DeadFightMenuTransition()
+    {
+        if (!GameObject.Find("Fight_TimelineManager").GetComponent<QTE_Manager>().qte_3)
+        {
+            checkpoint = 2;
+            fightTimeline.Stop();
+            deadTimeline.Play();
+        }
+        GameObject.Find("Fight_TimelineManager").GetComponent<QTE_Manager>().qte_3 = false;
     }
 
     public void SetActiveMenuDead()
@@ -59,7 +73,7 @@ public class TimelineController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void TryAgain(int checkpoint)
+    public void TryAgain()
     {
         if (checkpoint == 1)
         {
@@ -71,7 +85,11 @@ public class TimelineController : MonoBehaviour
         }
         else if (checkpoint == 2)
         {
-
+            deadTimeline.Stop();
+            deadMenu.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            fightTimeline.Play();
         }
         else
         {
