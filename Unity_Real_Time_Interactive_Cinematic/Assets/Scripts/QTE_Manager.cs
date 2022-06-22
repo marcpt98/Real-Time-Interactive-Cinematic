@@ -14,7 +14,7 @@ public class QTE_Manager : MonoBehaviour
     public GameObject qte_Simple_Left;
     public GameObject qte_Simple_Right;
     GameObject current_qte;
-    int qte_number = 0;
+    public int qte_number = 0;
     public bool qte_1 = false;
     bool qte_2 = false;
     public bool qte_3 = false;
@@ -207,31 +207,40 @@ public class QTE_Manager : MonoBehaviour
         switch (qte_number)
         {
             case 1:
+                JumpTo(5.25f);
                 Debug.Log("1 Fail animation playing");
                 break;
             case 2:
+                JumpTo(8.9f);
                 Debug.Log("2 Fail animation playing");
                 break;
             case 3:
+                JumpTo(16.75f);
                 Debug.Log("3 Fail animation playing");
                 break;
             case 4:
                 qte_1 = false;
+                JumpTo(22.0833f);
                 Debug.Log("4 Fail animation playing");
                 break;
             case 5:
+                JumpTo(10.1333f);
                 Debug.Log("5 Fail animation playing");
                 break;
             case 6:
+                JumpTo(14.2167f);
                 Debug.Log("6 Fail animation playing");
                 break;
             case 7:
+                JumpTo(20.3833f);
                 Debug.Log("7 Fail animation playing");
                 break;
             case 8:
+                JumpTo(24.3833f);
                 Debug.Log("8 Fail animation playing");
                 break;
             case 9:
+                JumpTo(28.4f);
                 Debug.Log("9 Fail animation playing");
                 break;
             default:

@@ -14,6 +14,7 @@ public class QTE_PressButton : MonoBehaviour
     GameObject gparent;
     bool callfade = false;
     QTE_Manager Timeline;
+    int qteNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -29,12 +30,25 @@ public class QTE_PressButton : MonoBehaviour
     {
         if (!fail)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.anyKeyDown)
             {
-                GetComponent<Image>().color = sucessColor;
-                fillAmount = 1;
-                StartCoroutine(FadeOut());
-                Timeline.Sucess();
+                qteNumber = Timeline.qte_number;
+
+                if (qteNumber == 1 && Input.GetKeyDown(KeyCode.S) || qteNumber == 4 && Input.GetKeyDown(KeyCode.S))
+                {
+                    GetComponent<Image>().color = sucessColor;
+                    fillAmount = 1;
+                    StartCoroutine(FadeOut());
+                    Timeline.Sucess();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    fail = true;
+                    GetComponent<Image>().color = failColor;
+                    fillAmount = 1;
+                    Timeline.Fail();
+                }
             }
         }
         else

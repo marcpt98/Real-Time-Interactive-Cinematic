@@ -21,6 +21,7 @@ public class QTE_SmashButton : MonoBehaviour
     bool firstframe = false;
     bool callfade = false;
     QTE_Manager Timeline;
+    int qteNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +39,36 @@ public class QTE_SmashButton : MonoBehaviour
         {
             if (fillAmount < 1)
             {
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Input.anyKeyDown)
                 {
-                    fillAmount += fillProgress;
-                }
+                    qteNumber = Timeline.qte_number;
 
+                    if (qteNumber == 2 && Input.GetKeyDown(KeyCode.W) || qteNumber == 3 && Input.GetKeyDown(KeyCode.W))
+                    {
+                        fillAmount += fillProgress;
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        fail = true;
+                        GetComponent<Image>().color = failColor;
+                        fillAmount = 1;
+                        Timeline.Fail();
+                    }
+
+                    timePassed += Time.deltaTime;
+
+                    if (timePassed > maxTime)
+                    {
+                        timePassed = 0;
+                        fillAmount -= substractProgress;
+                    }
+
+                    if (fillAmount < 0)
+                    {
+                        fillAmount = 0;
+                    }
+                }
                 timePassed += Time.deltaTime;
 
                 if (timePassed > maxTime)
