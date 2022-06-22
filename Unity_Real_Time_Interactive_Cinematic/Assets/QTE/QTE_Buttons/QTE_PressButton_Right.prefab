@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2685013986399678438}
   - component: {fileID: 2685013986399678443}
   - component: {fileID: 2685013986399678440}
-  - component: {fileID: 1660411607255627427}
+  - component: {fileID: 4549988685618601302}
   m_Layer: 5
   m_Name: QTE_Interior
   m_TagString: Untagged
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: adefae72f9a558e45bc9fe0a152bb362, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9576556ffe84e32439b03c56b6bba203, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1660411607255627427
+--- !u!114 &4549988685618601302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 84583fb3eeafc3c4e88986eac394b00b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de48388842bd3dd41a48b00995f0b929, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154157548630597981}
   m_Layer: 5
-  m_Name: QTE_PressButtonFight
+  m_Name: QTE_PressButton_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

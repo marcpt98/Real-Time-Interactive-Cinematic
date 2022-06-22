@@ -12,8 +12,8 @@ public class Sniper_Scope : MonoBehaviour
     public GameObject weaponCamera;
     public Camera mainCamera;
 
-    float scopedFOV = 10f;
-    float unScopedFOV = 60f;
+    /*float scopedFOV = 10f;
+    float unScopedFOV = 60f;*/
 
     public PlayableDirector sniperTimeline;
     public GameObject gameplay;
@@ -62,8 +62,8 @@ public class Sniper_Scope : MonoBehaviour
         scopeOverlay.SetActive(true);
         weaponCamera.SetActive(false);
 
-        unScopedFOV = mainCamera.fieldOfView;
-        mainCamera.fieldOfView = scopedFOV;
+        //unScopedFOV = mainCamera.fieldOfView;
+        mainCamera.fieldOfView = 10;
     }
 
     void OnUnScoped()
@@ -71,6 +71,6 @@ public class Sniper_Scope : MonoBehaviour
         scopeOverlay.SetActive(false);
         weaponCamera.SetActive(true);
 
-        mainCamera.fieldOfView = unScopedFOV;
+        mainCamera.fieldOfView = 60;
     }
 }

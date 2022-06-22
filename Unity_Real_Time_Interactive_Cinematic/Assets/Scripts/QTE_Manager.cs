@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -8,7 +8,11 @@ public class QTE_Manager : MonoBehaviour
     public PlayableDirector director;
     public GameObject canvas;
     public GameObject qte_Smash;
-    public GameObject qte_Simple;
+    public GameObject qte_Simple_Grab;
+    public GameObject qte_Simple_L_Hit;
+    public GameObject qte_Simple_R_Hit;
+    public GameObject qte_Simple_Left;
+    public GameObject qte_Simple_Right;
     GameObject current_qte;
     int qte_number = 0;
     public bool qte_1 = false;
@@ -24,13 +28,75 @@ public class QTE_Manager : MonoBehaviour
 
     public void CreateSimpleQTE()
     {
-        CreateQTE(qte_Simple);
+        switch (qte_number)
+        {
+            case 1:
+                CreateQTE(qte_Simple_Grab);
+                break;
+            case 4:
+                CreateQTE(qte_Simple_Grab);
+                break;
+            case 5:
+                CreateQTE(qte_Simple_Left);
+                break;
+            case 6:
+                CreateQTE(qte_Simple_R_Hit);
+                break;
+            case 7:
+                CreateQTE(qte_Simple_Right);
+                break;
+            case 8:
+                CreateQTE(qte_Simple_R_Hit);
+                break;
+            case 9:
+                CreateQTE(qte_Simple_L_Hit);
+                break;
+            default:
+                CreateQTE(qte_Simple_Grab);
+                Debug.LogError("WRONG NUMBER");
+                break;
+        }
     }
 
     void CreateQTE(GameObject qte)
     {
         GameObject newCanvas = Instantiate(canvas);
-        current_qte = Instantiate(qte, new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0), Quaternion.identity);
+
+        switch (qte_number)
+        {
+            case 1:
+                current_qte = Instantiate(qte, new Vector3(-39, -181, 0), Quaternion.identity);
+                break;
+            case 2:
+                current_qte = Instantiate(qte, new Vector3(-212, 132, 0), Quaternion.identity);
+                break;
+            case 3:
+                current_qte = Instantiate(qte, new Vector3(-106, 135, 0), Quaternion.identity);
+                break;
+            case 4:
+                current_qte = Instantiate(qte, new Vector3(-1, -206, 0), Quaternion.identity);
+                break;
+            case 5:
+                current_qte = Instantiate(qte, new Vector3(106, 43, 0), Quaternion.identity);
+                break;
+            case 6:
+                current_qte = Instantiate(qte, new Vector3(153, -161, 0), Quaternion.identity);
+                break;
+            case 7:
+                current_qte = Instantiate(qte, new Vector3(368, -100, 0), Quaternion.identity);
+                break;
+            case 8:
+                current_qte = Instantiate(qte, new Vector3(-376, 24, 0), Quaternion.identity);
+                break;
+            case 9:
+                current_qte = Instantiate(qte, new Vector3(-221, -9, 0), Quaternion.identity);
+                break;
+            default:
+                current_qte = Instantiate(qte, new Vector3(-35, -180, 0), Quaternion.identity);
+                Debug.LogError("WRONG NUMBER");
+                break;
+        }
+        
         current_qte.transform.SetParent(newCanvas.transform, false);
     }
 

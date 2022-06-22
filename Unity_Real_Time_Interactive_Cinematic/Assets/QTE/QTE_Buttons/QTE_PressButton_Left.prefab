@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2685013986399678438}
   - component: {fileID: 2685013986399678443}
   - component: {fileID: 2685013986399678440}
-  - component: {fileID: 1016607128010309341}
+  - component: {fileID: 1154865972125353046}
   m_Layer: 5
   m_Name: QTE_Interior
   m_TagString: Untagged
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5890beda7e2449646a64838102f4e4a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7daff21fd1fadf84d833c9046b44a487, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1016607128010309341
+--- !u!114 &1154865972125353046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2685013986399678439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08945927fd823f4fa5ef505b57ffe4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 87d7f6b30f6249343913dbda6db06922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fillAmount: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af3dd362763d2b84c8fa84c8b5c15cfa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 461d536fb7b24154ea2ac04d67477bd9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154157548630597981}
   m_Layer: 5
-  m_Name: QTE_SmashButton
+  m_Name: QTE_PressButton_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

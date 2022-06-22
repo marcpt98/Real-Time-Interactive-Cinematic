@@ -433,7 +433,11 @@ MonoBehaviour:
   director: {fileID: 26944720}
   canvas: {fileID: 8395167248223550133, guid: 0338e08caa72c01499b91b37f4ef2ca0, type: 3}
   qte_Smash: {fileID: 9218587086945379599, guid: c0414e7b3304ae94c9527c6885c5a061, type: 3}
-  qte_Simple: {fileID: 9218587086945379599, guid: 89cc96c691136e946a7eaff6bdcf8cfc, type: 3}
+  qte_Simple_Grab: {fileID: 9218587086945379599, guid: efc54ceaa0b6ca640b0424ca9ea8cb5e, type: 3}
+  qte_Simple_L_Hit: {fileID: 9218587086945379599, guid: 89cc96c691136e946a7eaff6bdcf8cfc, type: 3}
+  qte_Simple_R_Hit: {fileID: 9218587086945379599, guid: e84098052803bfe47ad854da6301e654, type: 3}
+  qte_Simple_Left: {fileID: 9218587086945379599, guid: 22c43c5db2a4eb946819b04c2d973903, type: 3}
+  qte_Simple_Right: {fileID: 9218587086945379599, guid: 3589871883e5149498e98c6cda3a12c0, type: 3}
   qte_1: 0
   qte_3: 0
 --- !u!114 &26944724
@@ -461,20 +465,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSimpleQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 5
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSimpleQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -501,20 +505,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSimpleQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 6
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSimpleQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -527,20 +531,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSimpleQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 7
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSimpleQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -553,20 +557,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSimpleQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 8
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSimpleQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -579,20 +583,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSimpleQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 9
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 26944723}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSimpleQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2567,7 +2571,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.001
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -2594,8 +2598,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718196878}
-  m_LocalRotation: {x: -0.15391234, y: 0.63876957, z: 0.13247891, w: 0.7421145}
-  m_LocalPosition: {x: -10.121147, y: 7.688834, z: -0.11854035}
+  m_LocalRotation: {x: 0.015014582, y: 0.6825829, z: -0.014029332, w: 0.73051924}
+  m_LocalPosition: {x: -20.12, y: 2.35, z: -1.3599997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3038,7 +3042,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874577534}
-  m_LocalRotation: {x: 0.015014582, y: 0.6825829, z: -0.014029331, w: 0.73051924}
+  m_LocalRotation: {x: 0.015014582, y: 0.6825829, z: -0.014029332, w: 0.73051924}
   m_LocalPosition: {x: -20.12, y: 2.35, z: -1.3599997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3539,20 +3543,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 996131014}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSimpleQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 996131014}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSimpleQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3565,20 +3569,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 996131014}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSmashQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 996131014}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSmashQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3591,20 +3595,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 996131014}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSmashQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 996131014}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSmashQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3617,20 +3621,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 996131014}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: CreateSimpleQTE
-          m_Mode: 1
+          m_MethodName: GetNumberQTE
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 996131014}
           m_TargetAssemblyTypeName: QTE_Manager, Assembly-CSharp
-          m_MethodName: GetNumberQTE
-          m_Mode: 3
+          m_MethodName: CreateSimpleQTE
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3682,7 +3686,11 @@ MonoBehaviour:
   director: {fileID: 996131011}
   canvas: {fileID: 8395167248223550133, guid: 0338e08caa72c01499b91b37f4ef2ca0, type: 3}
   qte_Smash: {fileID: 9218587086945379599, guid: c0414e7b3304ae94c9527c6885c5a061, type: 3}
-  qte_Simple: {fileID: 9218587086945379599, guid: efc54ceaa0b6ca640b0424ca9ea8cb5e, type: 3}
+  qte_Simple_Grab: {fileID: 9218587086945379599, guid: efc54ceaa0b6ca640b0424ca9ea8cb5e, type: 3}
+  qte_Simple_L_Hit: {fileID: 9218587086945379599, guid: 89cc96c691136e946a7eaff6bdcf8cfc, type: 3}
+  qte_Simple_R_Hit: {fileID: 9218587086945379599, guid: e84098052803bfe47ad854da6301e654, type: 3}
+  qte_Simple_Left: {fileID: 9218587086945379599, guid: 22c43c5db2a4eb946819b04c2d973903, type: 3}
+  qte_Simple_Right: {fileID: 9218587086945379599, guid: 3589871883e5149498e98c6cda3a12c0, type: 3}
   qte_1: 0
   qte_3: 0
 --- !u!114 &996131015
@@ -5182,6 +5190,191 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 06a681a12cd22f04bbc6d61ef8411234, type: 3}
   m_PrefabInstance: {fileID: 1305498425}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1374521101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374521102}
+  - component: {fileID: 1374521105}
+  - component: {fileID: 1374521104}
+  - component: {fileID: 1374521103}
+  m_Layer: 0
+  m_Name: Credits_TimelineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1374521102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374521101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.15, y: 13.2, z: -15.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1580530761}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1374521103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374521101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa26be17cf147c546a6e1448d363cebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introTimeline: {fileID: 1150534168}
+  parkourTimeline: {fileID: 996131011}
+  sniperwaitTimeline: {fileID: 356809619}
+  prefightTimeline: {fileID: 59034282}
+  fightTimeline: {fileID: 26944720}
+  deadParkourTimeline: {fileID: 1540247341}
+  deadFightTimeline: {fileID: 1374521105}
+  deadMenuParkour: {fileID: 1436836915}
+  deadMenuFight: {fileID: 382782674}
+--- !u!114 &1374521104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374521101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: a5758fd9a322db443a960e889784a9ed, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1374521103}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: SetActiveMenuDead
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &1374521105
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374521101}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -6488238167930854351, guid: f54511018d5c6204abc1754c116aa613, type: 2}
+    value: {fileID: 8928267700636781206}
+  - key: {fileID: -2658274534071154766, guid: f54511018d5c6204abc1754c116aa613, type: 2}
+    value: {fileID: 8928267700636781205}
+  - key: {fileID: 6934456701469846760, guid: f54511018d5c6204abc1754c116aa613, type: 2}
+    value: {fileID: 1946154940}
+  - key: {fileID: 5953290088074806890, guid: f54511018d5c6204abc1754c116aa613, type: 2}
+    value: {fileID: 1158831994}
+  - key: {fileID: 5045271060649846878, guid: f54511018d5c6204abc1754c116aa613, type: 2}
+    value: {fileID: 1799749656}
+  - key: {fileID: -7458241867122144840, guid: f54511018d5c6204abc1754c116aa613, type: 2}
+    value: {fileID: 381489431}
+  - key: {fileID: 6810903282559246354, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1871788996}
+  - key: {fileID: 1747690724734390656, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1210538466}
+  - key: {fileID: 276162623769733115, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1886146870}
+  - key: {fileID: -4885660643815131984, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 718196878}
+  - key: {fileID: -2730223048345167034, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 2129267762}
+  - key: {fileID: -3758663409284845204, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1248509515}
+  - key: {fileID: 1427414054609237937, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1554791065}
+  - key: {fileID: -9110253197787014724, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 874577534}
+  - key: {fileID: -2765604686423667254, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1631797481}
+  - key: {fileID: -8846582014356514114, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1521435930}
+  - key: {fileID: -9013206201445429020, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1158831994}
+  - key: {fileID: 2617121460357822560, guid: d45f9c71a7313a44294d32be51f1c56b, type: 2}
+    value: {fileID: 1132740426}
+  - key: {fileID: 6810903282559246354, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 1871788996}
+  - key: {fileID: 1747690724734390656, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 276162623769733115, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4885660643815131984, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2730223048345167034, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3758663409284845204, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1427414054609237937, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -9110253197787014724, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2765604686423667254, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8846582014356514114, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -9013206201445429020, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2617121460357822560, guid: 7482a8b2e0d152d41a788451f2711498, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6810903282559246354, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 1871788996}
+  - key: {fileID: 1747690724734390656, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 276162623769733115, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4885660643815131984, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2730223048345167034, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3758663409284845204, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1427414054609237937, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -9110253197787014724, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2765604686423667254, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8846582014356514114, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -9013206201445429020, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2617121460357822560, guid: 413e8e003430db24894cb097dfd7f65f, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1428808271
 GameObject:
   m_ObjectHideFlags: 3
@@ -5779,7 +5972,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521435930}
-  m_LocalRotation: {x: 0.2620726, y: 0.4488938, z: -0.13958395, w: 0.84281003}
+  m_LocalRotation: {x: 0.2620726, y: 0.44889373, z: -0.13958393, w: 0.84281003}
   m_LocalPosition: {x: -4.038, y: 10.483455, z: 0.264}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6055,6 +6248,7 @@ Transform:
   - {fileID: 26944719}
   - {fileID: 1540247340}
   - {fileID: 160559185}
+  - {fileID: 1374521102}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
