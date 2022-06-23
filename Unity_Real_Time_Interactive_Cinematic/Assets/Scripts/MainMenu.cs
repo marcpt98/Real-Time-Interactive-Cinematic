@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator animator;
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        FadeToLevel();
     }
 
     public void GoToMenu()
@@ -18,5 +20,15 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void FadeToLevel()
+    {
+        animator.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(1);
     }
 }
