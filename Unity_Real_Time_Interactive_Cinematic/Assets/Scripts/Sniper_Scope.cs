@@ -16,6 +16,7 @@ public class Sniper_Scope : MonoBehaviour
     float unScopedFOV = 60f;*/
 
     public PlayableDirector sniperTimeline;
+    public PlayableDirector musicTimeline;
     public GameObject gameplay;
     public GameObject SniperModel;
 
@@ -49,6 +50,7 @@ public class Sniper_Scope : MonoBehaviour
                 OnUnScoped();
                 gameplay.SetActive(false);
                 SniperModel.SetActive(true);
+                musicTimeline.Stop();
                 sniperTimeline.Play();
                 Debug.Log(hit.transform.gameObject.name);
             }

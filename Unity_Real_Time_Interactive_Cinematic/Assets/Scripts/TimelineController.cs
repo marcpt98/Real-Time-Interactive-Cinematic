@@ -12,6 +12,7 @@ public class TimelineController : MonoBehaviour
     public PlayableDirector fightTimeline;
     public PlayableDirector deadParkourTimeline;
     public PlayableDirector deadFightTimeline;
+    public PlayableDirector musicTimeline;
     public GameObject deadMenuParkour;
     public GameObject deadMenuFight;
     QTE_Manager Timeline;
