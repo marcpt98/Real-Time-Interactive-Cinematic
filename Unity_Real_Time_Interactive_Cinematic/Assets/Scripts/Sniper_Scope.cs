@@ -20,6 +20,11 @@ public class Sniper_Scope : MonoBehaviour
     public GameObject gameplay;
     public GameObject SniperModel;
 
+    public AudioSource scopeIn;
+    public AudioSource scopeOut;
+    public AudioSource noShoot;
+    bool playUnScope = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +32,8 @@ public class Sniper_Scope : MonoBehaviour
         {
             animator.SetBool("Scoped", isScoped = true);
             StartCoroutine(OnScoped());
+            scopeIn.Play();
+            playUnScope = true;
         }
         /*if (Input.GetButtonUp("Fire2"))
         {
@@ -35,6 +42,11 @@ public class Sniper_Scope : MonoBehaviour
         }*/
         if (Input.GetKey(KeyCode.Mouse1) == false)
         {
+            if(playUnScope)
+            {
+                scopeOut.Play();
+                playUnScope = false;
+            }
             animator.SetBool("Scoped", isScoped = false);
             OnUnScoped();
         }
@@ -53,6 +65,10 @@ public class Sniper_Scope : MonoBehaviour
                 musicTimeline.Stop();
                 sniperTimeline.Play();
                 Debug.Log(hit.transform.gameObject.name);
+            }
+            else
+            {
+                noShoot.Play();
             }
         }
     }
