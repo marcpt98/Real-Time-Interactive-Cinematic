@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class QTE_PressButton : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class QTE_PressButton : MonoBehaviour
     bool callfade = false;
     QTE_Manager Timeline;
     int qteNumber;
+    bool success = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,24 +32,29 @@ public class QTE_PressButton : MonoBehaviour
     {
         if (!fail)
         {
-            if (Input.anyKeyDown)
+            if (!success)
             {
-                qteNumber = Timeline.qte_number;
+                if (Input.anyKeyDown || Gamepad.all[0].IsPressed(1))
+                {
+                    qteNumber = Timeline.qte_number;
 
-                if (qteNumber == 1 && Input.GetKeyDown(KeyCode.S) || qteNumber == 4 && Input.GetKeyDown(KeyCode.S))
-                {
-                    GetComponent<Image>().color = sucessColor;
-                    fillAmount = 1;
-                    StartCoroutine(FadeOut());
-                    Timeline.Sucess();
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    fail = true;
-                    GetComponent<Image>().color = failColor;
-                    fillAmount = 1;
-                    Timeline.Fail();
+                    if (qteNumber == 1 && Input.GetKeyDown(KeyCode.S) || qteNumber == 4 && Input.GetKeyDown(KeyCode.S)
+                        || qteNumber == 1 && Gamepad.all[0].squareButton.isPressed || qteNumber == 4 && Gamepad.all[0].squareButton.isPressed)
+                    {
+                        GetComponent<Image>().color = sucessColor;
+                        fillAmount = 1;
+                        StartCoroutine(FadeOut());
+                        Timeline.Sucess();
+                        success = true;
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        fail = true;
+                        GetComponent<Image>().color = failColor;
+                        fillAmount = 1;
+                        Timeline.Fail();
+                    }
                 }
             }
         }

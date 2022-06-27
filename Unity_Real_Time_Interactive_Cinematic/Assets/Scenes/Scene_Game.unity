@@ -665,6 +665,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 50061732b87604241bef126ab3b1e062, type: 2}
     - {fileID: 11400000, guid: ac15f92dccc41f642a1a26572fb6a29c, type: 2}
     - {fileID: 11400000, guid: fb3cf76b8e994c740b600f1e893fce55, type: 2}
+    - {fileID: 11400000, guid: 93fe0eb6e9c43874e8fd73b8e70d0c62, type: 2}
+    - {fileID: 11400000, guid: 80cb6fa394e3a7345a632fff6ef77ec0, type: 2}
+    - {fileID: 11400000, guid: 3669d60f702035548bb998d8bafd66f5, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -812,15 +815,93 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 26944718}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: 
+        - m_Target: {fileID: 26944722}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: CreditsTransition
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 26944722}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 26944722}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 26944722}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 26944722}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 26944722}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 26944722}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.3
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -979,6 +1060,8 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 905f218ecff8e7b4cb1349a61c244efa, type: 2}
+    - {fileID: 11400000, guid: 93fe0eb6e9c43874e8fd73b8e70d0c62, type: 2}
+    - {fileID: 11400000, guid: 80cb6fa394e3a7345a632fff6ef77ec0, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -991,6 +1074,58 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 59034284}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 59034284}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 59034284}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.2
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 59034284}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.3
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -4302,8 +4437,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718196878}
-  m_LocalRotation: {x: 0.26207262, y: 0.44889376, z: -0.13958393, w: 0.84281003}
-  m_LocalPosition: {x: -4.038, y: 10.483455, z: 0.264}
+  m_LocalRotation: {x: -0.15391234, y: 0.63876957, z: 0.13247891, w: 0.7421145}
+  m_LocalPosition: {x: -10.121147, y: 7.688834, z: -0.11854035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4479,16 +4614,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 743716785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &743716787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5681,6 +5825,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b907c42f7f11e0d4b882f06e929e3231, type: 2}
     - {fileID: 11400000, guid: 7a45195d25381e4488636ff5f2663fee, type: 2}
     - {fileID: 11400000, guid: 905f218ecff8e7b4cb1349a61c244efa, type: 2}
+    - {fileID: 11400000, guid: 93fe0eb6e9c43874e8fd73b8e70d0c62, type: 2}
+    - {fileID: 11400000, guid: 80cb6fa394e3a7345a632fff6ef77ec0, type: 2}
+    - {fileID: 11400000, guid: 3669d60f702035548bb998d8bafd66f5, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -5825,6 +5972,84 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 996131015}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 996131015}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 996131015}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 996131015}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 4.5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 996131015}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 996131015}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 3.44
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -6118,6 +6343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054248157}
   - component: {fileID: 1054248156}
+  - component: {fileID: 1054248158}
   m_Layer: 0
   m_Name: ' Game Manager'
   m_TagString: Untagged
@@ -6154,6 +6380,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054248158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054248155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7477da20f4f82e048b0200ac5d13c767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1100047092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6617,6 +6855,8 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 708306d21d70cc9469ec1b0d8fd4451e, type: 2}
+    - {fileID: 11400000, guid: 93fe0eb6e9c43874e8fd73b8e70d0c62, type: 2}
+    - {fileID: 11400000, guid: 80cb6fa394e3a7345a632fff6ef77ec0, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -6629,6 +6869,58 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150534170}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1150534170}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150534170}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1150534170}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.1
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -9038,6 +9330,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: a5758fd9a322db443a960e889784a9ed, type: 2}
+    - {fileID: 11400000, guid: 93fe0eb6e9c43874e8fd73b8e70d0c62, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -9050,6 +9343,32 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 1
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1540247343}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1540247343}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.5
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -11581,6 +11900,9 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 708306d21d70cc9469ec1b0d8fd4451e, type: 2}
+    - {fileID: 11400000, guid: 93fe0eb6e9c43874e8fd73b8e70d0c62, type: 2}
+    - {fileID: 11400000, guid: 80cb6fa394e3a7345a632fff6ef77ec0, type: 2}
+    - {fileID: 11400000, guid: 3669d60f702035548bb998d8bafd66f5, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -11593,6 +11915,84 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1872822076}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1872822076}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 3
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1872822076}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1872822076}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 4
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1872822076}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibratePower
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1872822076}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: ControllerVibrateTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.15
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2

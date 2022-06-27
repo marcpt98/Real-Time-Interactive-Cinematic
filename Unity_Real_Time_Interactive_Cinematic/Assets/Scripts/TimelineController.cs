@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.InputSystem;
 
 public class TimelineController : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class TimelineController : MonoBehaviour
     public GameObject deadMenuParkour;
     public GameObject deadMenuFight;
     QTE_Manager Timeline;
+
+    float power, time = 0;
 
     // From Intro to Sniper
     public void GameplayTransition()
@@ -44,6 +47,13 @@ public class TimelineController : MonoBehaviour
     {
         prefightTimeline.Stop();
         fightTimeline.Play();
+    }
+
+    // From Fight to Credits
+    public void CreditsTransition()
+    {
+        fightTimeline.Stop();
+        creditsTimeline.Play();
     }
 
     // From game to Dead screen
@@ -102,5 +112,25 @@ public class TimelineController : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         fightTimeline.Play(); 
+    }
+
+    public void ControllerVibrateTime(float timevalue)
+    {
+        time = timevalue;
+        StartCoroutine(Vibrate());
+    }
+
+    public void ControllerVibratePower(float powervalue)
+    {
+        power = powervalue;
+    }
+
+    IEnumerator Vibrate()
+    {
+        Gamepad.all[0].SetMotorSpeeds(power, power);
+       
+        yield return new WaitForSeconds(time);
+        
+        Gamepad.all[0].SetMotorSpeeds(0, 0);
     }
 }

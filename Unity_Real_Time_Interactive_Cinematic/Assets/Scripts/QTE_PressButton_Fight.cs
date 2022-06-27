@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class QTE_PressButton_Fight : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class QTE_PressButton_Fight : MonoBehaviour
     bool callfade = false;
     QTE_Manager Timeline;
     int qteNumber;
+    bool success = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,26 +32,54 @@ public class QTE_PressButton_Fight : MonoBehaviour
     {
         if (!fail)
         {
-            if (Input.anyKeyDown)
+            if(!success)
             {
-                qteNumber = Timeline.qte_number;
+                if (Input.anyKeyDown || Gamepad.all[0].IsPressed(1) || Input.GetAxis("Horizontal") != 0)
+                {
+                    qteNumber = Timeline.qte_number;
 
-                if (qteNumber == 5 && Input.GetKeyDown(KeyCode.LeftArrow) || qteNumber == 6 && Input.GetKeyDown(KeyCode.E) ||
-                    qteNumber == 7 && Input.GetKeyDown(KeyCode.RightArrow) || qteNumber == 8 && Input.GetKeyDown(KeyCode.E) || 
-                    qteNumber == 9 && Input.GetKeyDown(KeyCode.Q))
-                {
-                    GetComponent<Image>().color = sucessColor;
-                    fillAmount = 1;
-                    StartCoroutine(FadeOut());
-                    Timeline.Sucess();
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    fail = true;
-                    GetComponent<Image>().color = failColor;
-                    fillAmount = 1;
-                    Timeline.Fail();
+                    if (qteNumber == 5 || qteNumber == 7)
+                    {
+                        if (qteNumber == 5 && Input.GetKeyDown(KeyCode.LeftArrow) || qteNumber == 7 && Input.GetKeyDown(KeyCode.RightArrow) ||
+                            qteNumber == 5 && Gamepad.all[0].leftStick.left.isPressed || qteNumber == 7 && Gamepad.all[0].leftStick.right.isPressed)
+                        {
+                            GetComponent<Image>().color = sucessColor;
+                            fillAmount = 1;
+                            StartCoroutine(FadeOut());
+                            Timeline.Sucess();
+                            success = true;
+                        }
+                        else if(qteNumber == 5 && Input.GetKeyDown(KeyCode.RightArrow) || qteNumber == 7 && Input.GetKeyDown(KeyCode.LeftArrow) ||
+                            qteNumber == 5 && Gamepad.all[0].leftStick.right.isPressed || qteNumber == 7 && Gamepad.all[0].leftStick.left.isPressed)
+                        {
+                            StopAllCoroutines();
+                            fail = true;
+                            GetComponent<Image>().color = failColor;
+                            fillAmount = 1;
+                            Timeline.Fail();
+                        }
+                    }
+                    else
+                    {
+                        if (qteNumber == 6 && Input.GetKeyDown(KeyCode.E) || qteNumber == 8 && Input.GetKeyDown(KeyCode.E) ||
+                            qteNumber == 9 && Input.GetKeyDown(KeyCode.Q) || qteNumber == 6 && Gamepad.all[0].rightShoulder.isPressed ||
+                            qteNumber == 8 && Gamepad.all[0].rightShoulder.isPressed || qteNumber == 9 && Gamepad.all[0].leftShoulder.isPressed)
+                        {
+                            GetComponent<Image>().color = sucessColor;
+                            fillAmount = 1;
+                            StartCoroutine(FadeOut());
+                            Timeline.Sucess();
+                            success = true;
+                        }
+                        else
+                        {
+                            StopAllCoroutines();
+                            fail = true;
+                            GetComponent<Image>().color = failColor;
+                            fillAmount = 1;
+                            Timeline.Fail();
+                        }
+                    }
                 }
             }
         }

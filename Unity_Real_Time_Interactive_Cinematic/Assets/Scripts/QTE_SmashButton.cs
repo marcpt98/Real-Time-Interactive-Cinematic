@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class QTE_SmashButton : MonoBehaviour
 {
@@ -39,11 +40,12 @@ public class QTE_SmashButton : MonoBehaviour
         {
             if (fillAmount < 1)
             {
-                if (Input.anyKeyDown)
+                if (Input.anyKeyDown || Gamepad.all[0].IsPressed(1))
                 {
                     qteNumber = Timeline.qte_number;
 
-                    if (qteNumber == 2 && Input.GetKeyDown(KeyCode.W) || qteNumber == 3 && Input.GetKeyDown(KeyCode.W))
+                    if (qteNumber == 2 && Input.GetKeyDown(KeyCode.W) || qteNumber == 3 && Input.GetKeyDown(KeyCode.W) || 
+                        qteNumber == 2 && Gamepad.all[0].crossButton.isPressed || qteNumber == 3 && Gamepad.all[0].crossButton.isPressed)
                     {
                         fillAmount += fillProgress;
                     }
