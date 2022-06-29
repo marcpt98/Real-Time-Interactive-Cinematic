@@ -5,7 +5,6 @@ using UnityEngine.Playables;
 
 public class Game_GameManager : MonoBehaviour
 {
-    bool visible = false;
     public PlayableDirector parkourTimeline;
     public PlayableDirector fightTimeline;
     public PlayableDirector introTimeline;
@@ -13,7 +12,7 @@ public class Game_GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = visible;
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 

@@ -1611,12 +1611,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607770852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b99899d565f96c6498818c533b17dadf, type: 3}
+  m_Script: {fileID: 11500000, guid: bafddb2644ec71a4eb436ef1386f7c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parkourTimeline: {fileID: 0}
-  fightTimeline: {fileID: 0}
-  introTimeline: {fileID: 0}
 --- !u!4 &1607770854
 Transform:
   m_ObjectHideFlags: 0
