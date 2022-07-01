@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class TimelineController : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class TimelineController : MonoBehaviour
     public PS4_Controller controller;
 
     float power, time = 0;
+
+    public GameObject TryAgainButtonParkour;
+    public GameObject TryAgainButtonFight;
 
     // From Intro to Sniper
     public void GameplayTransition()
@@ -80,13 +84,16 @@ public class TimelineController : MonoBehaviour
 
     public void SetActiveMenuDead(int timelinenum)
     {
+        EventSystem.current.SetSelectedGameObject(null);
         switch (timelinenum)
         {
             case 1:
                 deadMenuParkour.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(TryAgainButtonParkour);
                 break;
             case 2:
                 deadMenuFight.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(TryAgainButtonFight);
                 break;
             default:
                 Debug.LogError("WRONG NUMBER");
