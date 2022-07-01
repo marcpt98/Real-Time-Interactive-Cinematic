@@ -18,6 +18,7 @@ public class TimelineController : MonoBehaviour
     public GameObject deadMenuParkour;
     public GameObject deadMenuFight;
     QTE_Manager Timeline;
+    public PS4_Controller controller;
 
     float power, time = 0;
 
@@ -116,7 +117,8 @@ public class TimelineController : MonoBehaviour
 
     public void ControllerVibrateTime(float timevalue)
     {
-        if (Gamepad.current != null)
+        Debug.Log(controller.controller);
+        if (controller.controller)
         {
             time = timevalue;
             StartCoroutine(Vibrate());
