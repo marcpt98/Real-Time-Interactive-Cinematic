@@ -34,14 +34,16 @@ public class QTE_PressButton_Fight : MonoBehaviour
         {
             if(!success)
             {
-                if (Input.anyKeyDown || Gamepad.all[0].IsPressed(1) || Input.GetAxis("Horizontal") != 0)
+                if (Input.anyKeyDown || Gamepad.current != null && Gamepad.all[0].IsPressed(1) 
+                    || Gamepad.current != null && Input.GetAxis("Horizontal") != 0)
                 {
                     qteNumber = Timeline.qte_number;
 
                     if (qteNumber == 5 || qteNumber == 7)
                     {
-                        if (qteNumber == 5 && Input.GetKeyDown(KeyCode.LeftArrow) || qteNumber == 7 && Input.GetKeyDown(KeyCode.RightArrow) ||
-                            qteNumber == 5 && Gamepad.all[0].leftStick.left.isPressed || qteNumber == 7 && Gamepad.all[0].leftStick.right.isPressed)
+                        if (qteNumber == 5 && Input.GetKeyDown(KeyCode.A) || qteNumber == 7 && Input.GetKeyDown(KeyCode.D) ||
+                            Gamepad.current != null && qteNumber == 5 && Gamepad.all[0].leftStick.left.isPressed ||
+                            Gamepad.current != null && qteNumber == 7 && Gamepad.all[0].leftStick.right.isPressed)
                         {
                             GetComponent<Image>().color = sucessColor;
                             fillAmount = 1;
@@ -49,8 +51,9 @@ public class QTE_PressButton_Fight : MonoBehaviour
                             Timeline.Sucess();
                             success = true;
                         }
-                        else if(qteNumber == 5 && Input.GetKeyDown(KeyCode.RightArrow) || qteNumber == 7 && Input.GetKeyDown(KeyCode.LeftArrow) ||
-                            qteNumber == 5 && Gamepad.all[0].leftStick.right.isPressed || qteNumber == 7 && Gamepad.all[0].leftStick.left.isPressed)
+                        else if(qteNumber == 5 && Input.GetKeyDown(KeyCode.D) || qteNumber == 7 && Input.GetKeyDown(KeyCode.A) ||
+                            Gamepad.current != null && qteNumber == 5 && Gamepad.all[0].leftStick.right.isPressed ||
+                            Gamepad.current != null && qteNumber == 7 && Gamepad.all[0].leftStick.left.isPressed)
                         {
                             StopAllCoroutines();
                             fail = true;
@@ -62,8 +65,9 @@ public class QTE_PressButton_Fight : MonoBehaviour
                     else
                     {
                         if (qteNumber == 6 && Input.GetKeyDown(KeyCode.E) || qteNumber == 8 && Input.GetKeyDown(KeyCode.E) ||
-                            qteNumber == 9 && Input.GetKeyDown(KeyCode.Q) || qteNumber == 6 && Gamepad.all[0].rightShoulder.isPressed ||
-                            qteNumber == 8 && Gamepad.all[0].rightShoulder.isPressed || qteNumber == 9 && Gamepad.all[0].leftShoulder.isPressed)
+                            qteNumber == 9 && Input.GetKeyDown(KeyCode.Q) || Gamepad.current != null && qteNumber == 6 && Gamepad.all[0].rightShoulder.isPressed ||
+                            Gamepad.current != null && qteNumber == 8 && Gamepad.all[0].rightShoulder.isPressed ||
+                            Gamepad.current != null && qteNumber == 9 && Gamepad.all[0].leftShoulder.isPressed)
                         {
                             GetComponent<Image>().color = sucessColor;
                             fillAmount = 1;

@@ -34,12 +34,13 @@ public class QTE_PressButton : MonoBehaviour
         {
             if (!success)
             {
-                if (Input.anyKeyDown || Gamepad.all[0].IsPressed(1))
+                if (Input.anyKeyDown || Gamepad.current != null && Gamepad.all[0].IsPressed(1))
                 {
                     qteNumber = Timeline.qte_number;
 
-                    if (qteNumber == 1 && Input.GetKeyDown(KeyCode.S) || qteNumber == 4 && Input.GetKeyDown(KeyCode.S)
-                        || qteNumber == 1 && Gamepad.all[0].squareButton.isPressed || qteNumber == 4 && Gamepad.all[0].squareButton.isPressed)
+                    if (qteNumber == 1 && Input.GetKeyDown(KeyCode.S) || qteNumber == 4 && Input.GetKeyDown(KeyCode.S) || 
+                        Gamepad.current != null && qteNumber == 1 && Gamepad.all[0].squareButton.isPressed || 
+                        Gamepad.current != null && qteNumber == 4 && Gamepad.all[0].squareButton.isPressed)
                     {
                         GetComponent<Image>().color = sucessColor;
                         fillAmount = 1;

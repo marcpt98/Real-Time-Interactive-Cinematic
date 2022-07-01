@@ -28,8 +28,6 @@ public class MoveButtonRight : MonoBehaviour
             ZRotation += 130f * Time.deltaTime;
         }
 
-        Debug.Log(ZRotation);
-
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, ZRotation);
     }
 }

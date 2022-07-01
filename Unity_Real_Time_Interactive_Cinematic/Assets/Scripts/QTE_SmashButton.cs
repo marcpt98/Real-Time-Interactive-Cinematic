@@ -40,12 +40,13 @@ public class QTE_SmashButton : MonoBehaviour
         {
             if (fillAmount < 1)
             {
-                if (Input.anyKeyDown || Gamepad.all[0].IsPressed(1))
+                if (Input.anyKeyDown || Gamepad.current != null && Gamepad.all[0].IsPressed(1))
                 {
                     qteNumber = Timeline.qte_number;
 
-                    if (qteNumber == 2 && Input.GetKeyDown(KeyCode.W) || qteNumber == 3 && Input.GetKeyDown(KeyCode.W) || 
-                        qteNumber == 2 && Gamepad.all[0].crossButton.isPressed || qteNumber == 3 && Gamepad.all[0].crossButton.isPressed)
+                    if (qteNumber == 2 && Input.GetKeyDown(KeyCode.W) || qteNumber == 3 && Input.GetKeyDown(KeyCode.W) ||
+                        Gamepad.current != null && qteNumber == 2 && Gamepad.all[0].crossButton.isPressed ||
+                        Gamepad.current != null && qteNumber == 3 && Gamepad.all[0].crossButton.isPressed)
                     {
                         fillAmount += fillProgress;
                     }
