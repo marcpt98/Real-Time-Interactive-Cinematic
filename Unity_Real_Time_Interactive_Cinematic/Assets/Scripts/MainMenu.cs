@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
     public Animator animator;
+    public GameObject instructions;
+    bool insactive = false;
 
     public void PlayGame()
     {
@@ -30,5 +33,11 @@ public class MainMenu : MonoBehaviour
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void HowToPlay()
+    {
+        insactive = !insactive;
+        instructions.SetActive(insactive);
     }
 }
