@@ -116,8 +116,11 @@ public class TimelineController : MonoBehaviour
 
     public void ControllerVibrateTime(float timevalue)
     {
-        time = timevalue;
-        StartCoroutine(Vibrate());
+        if (Gamepad.current != null)
+        {
+            time = timevalue;
+            StartCoroutine(Vibrate());
+        }
     }
 
     public void ControllerVibratePower(float powervalue)
