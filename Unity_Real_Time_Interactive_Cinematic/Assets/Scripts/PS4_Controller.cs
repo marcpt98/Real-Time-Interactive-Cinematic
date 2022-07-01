@@ -10,14 +10,19 @@ public class PS4_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ControllerCheck());
+        //StartCoroutine(ControllerCheck());
+
+        for (int i = 0; i < Gamepad.all.Count; i++) 
+        {
+            Debug.Log(Gamepad.all[i].name);
+        }
     }
 
-    IEnumerator ControllerCheck()
+    /*IEnumerator ControllerCheck()
     {
         while (true)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(2f);
             for (int i = 0; i < Input.GetJoystickNames().Length; i++)
             {
                 if (!string.IsNullOrEmpty(Input.GetJoystickNames()[i]))
@@ -34,5 +39,5 @@ public class PS4_Controller : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }
